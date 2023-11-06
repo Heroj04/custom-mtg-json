@@ -1,0 +1,40 @@
+{
+  "name": "custom-mtg-json",
+  "version": "1.0.0",
+  "description": "Host a custom MTG JSON server",
+  "main": "dist/app.js",
+  "types": "dist/app.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "prepublish": "npx tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heroj04/custom-mtg-json.git"
+  },
+  "author": "Jack Footner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Heroj04/custom-mtg-json/issues"
+  },
+  "homepage": "https://github.com/Heroj04/custom-mtg-json#readme",
+  "dependencies": {
+    "@types/express": "^4.17.20",
+    "@types/swagger-jsdoc": "^6.0.2",
+    "@types/swagger-ui-express": "^4.1.5",
+    "express": "^4.18.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.2",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "eslint": "^8.49.0",
+    "eslint-config-standard-with-typescript": "^39.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-n": "^16.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "typescript": "^5.2.2"
+  }
+}
