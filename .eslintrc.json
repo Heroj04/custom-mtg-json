@@ -12,5 +12,6 @@
     "rules": {
         "@typescript-eslint/indent": ["error", "tab"],
         "no-tabs": "off"
-    }
+    },
+    "ignorePatterns": ["dist/"]
 }
