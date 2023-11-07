@@ -7,8 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx tsc",
-    "prepublish": "npx tsc",
-    "lint": "npx eslint . --ext .ts"
+    "prepublish": "npm run build",
+    "lint": "npx eslint . --ext .ts",
+    "start": "node ./dist/app.js"
   },
   "repository": {
     "type": "git",
