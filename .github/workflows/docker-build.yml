@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - "main"
+      - development
+    tags:
+      - '*'
 
 jobs:
   build:
@@ -22,10 +25,20 @@ jobs:
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       -
+        name: Determine Docker tag
+        run: |
+          if [[ $GITHUB_REF == refs/heads/main ]]; then
+            DOCKER_TAG=latest
+          elif [[ $GITHUB_REF == refs/heads/development ]]; then
+            DOCKER_TAG=development
+          else
+            DOCKER_TAG=${GITHUB_REF#refs/tags/}
+          fi
+      -
         name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/customtrice:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/customtrice:$DOCKER_TAG
