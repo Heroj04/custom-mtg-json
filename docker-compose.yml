@@ -1,0 +1,6 @@
+version: '3'
+services:
+  customtrice:
+    image: heroj04/customtrice:latest
+    ports:
+      - "3000:3000"
