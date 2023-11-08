@@ -3,14 +3,12 @@ name: Build Docker
 on:
   push:
     branches:
-      - 'main'
-      - 'development'
+      - '*'
     tags:
       - '*'    
   pull_request:
     branches:
-      - 'main'
-      - 'development'
+      - '*'
 
 jobs:
   build:
