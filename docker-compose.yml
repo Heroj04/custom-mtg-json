@@ -4,3 +4,7 @@ services:
     image: heroj04/customtrice:latest
     ports:
       - "3000:3000"
+    volumes:
+      - ./public:/usr/src/app/public
+    env_file:
+      - .env

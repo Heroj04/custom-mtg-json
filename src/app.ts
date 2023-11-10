@@ -1,10 +1,12 @@
 import express from 'express'
 import * as swaggerUi from 'swagger-ui-express'
 import swaggerJSDoc from 'swagger-jsdoc'
+import 'dotenv/config'
+
 import routes from './routes' // Import the dynamically loaded routes
 
 const app = express()
-const port = 3000
+const port = process.env.CUSTOMTRICE_PORT
 
 // Middleware to parse JSON requests
 app.use(express.json())
